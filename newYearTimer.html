@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background: url(timer.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        .title{
+            margin-bottom: 23%;
+            width: 50%;
+            font-size: 40px;
+            font-family: 'Lobster Two', cursive;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .time{
+            font-size: 70px;
+            display: flex;
+            margin: auto;
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
+        .time-item{
+            padding: 3px 30px;
+        }
+        #seconds{
+            color: #ed5486;
+        }
+        .lebal{
+            font-size: 21px;
+            font-weight: 600;
+            padding: 3px 20px;
+        }
+        .time-lebals{
+            display: flex;
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
+        .main {
+            background-color: rgba(51, 18, 18, 0.425);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>New Year Countdown</h1>
+    </div>
+    <div class="main">
+        <div class="time">
+            <div class="time-item" id="days"></div>
+            <div class="time-item" id="hours"></div>
+            <div class="time-item" id="minutes"></div>
+            <div class="time-item" id="seconds"></div>
+        </div>
+        <div class="time-lebals">
+            <div class="lebal">DAYS</div>
+            <div class="lebal">HOURS</div>
+            <div class="lebal">MINUTES</div>
+            <div class="lebal">SECONDS</div>    
+        </div>
+    </div>
+    <script>
+
+        var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            //     + minutes + "m " + seconds + "s ";
+
+             document.getElementById("days").innerHTML = days;
+             document.getElementById("hours").innerHTML = hours;
+             document.getElementById("minutes").innerHTML = minutes;
+             document.getElementById("seconds").innerHTML = seconds;
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
