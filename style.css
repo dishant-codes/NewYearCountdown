@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background: url(timer.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.title{
+    margin-bottom: 20%;
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Lobster Two', cursive;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.time{
+    font-size: 70px;
+    display: flex;
+    margin: auto;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.time-item{
+    padding: 3px 33px;
+}
+#seconds{
+    color: #ed5486;
+}
+.lebal{
+    font-size: 21px;
+    font-weight: 600;
+    padding: 3px 19px;
+}
+.time-lebals{
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.main {
+    background-color: rgba(51, 18, 18, 0.425);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    color: white;
+}
+.year{
+    display: none;
+    color: white;
+}
+@media screen and (max-width:500px) and (min-width:200px ){
+    .title{
+        margin-bottom: 0%;
+        position: absolute;
+        top: 20%;
+        font-size: 40px;
+        width: 800px;
+    }
+   .year{
+        position: absolute;
+        bottom: -900px;
+        display: block;
+        font-size: 350px;
+        left: 20%;
+        color: #fcfcfc;
+        font-family: 'Lobster', cursive;
+    }
+    .time{
+        font-size: 100px;
+        padding-left: 3rem;
+    }
+    .time-item{
+        padding: 35px 50px;
+    }
+    .main{
+        position: absolute;
+        bottom: -300px;
+        width: 800px;
+    }
+    .lebal{
+        font-size: 40px;
+    }
+    .time-lebals{
+        padding-left: 3rem;
+    }
+}

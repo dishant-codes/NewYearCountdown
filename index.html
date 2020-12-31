@@ -4,58 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
-        *{
-            margin: 0%;
-            padding: 0%;
-        }
-        body{
-            background: url(timer.jpg) no-repeat center center fixed;
-            background-size: cover;
-        }
-        .title{
-            margin-bottom: 23%;
-            width: 50%;
-            font-size: 40px;
-            font-family: 'Lobster Two', cursive;
-            color: white;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-        .time{
-            font-size: 70px;
-            display: flex;
-            margin: auto;
-            padding-left: 10rem;
-            padding-right: 10rem;
-        }
-        .time-item{
-            padding: 3px 30px;
-        }
-        #seconds{
-            color: #ed5486;
-        }
-        .lebal{
-            font-size: 21px;
-            font-weight: 600;
-            padding: 3px 20px;
-        }
-        .time-lebals{
-            display: flex;
-            padding-left: 10rem;
-            padding-right: 10rem;
-        }
-        .main {
-            background-color: rgba(51, 18, 18, 0.425);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: auto;
-            width: 50%;
-            padding: 20px;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -76,6 +25,7 @@
             <div class="lebal">SECONDS</div>    
         </div>
     </div>
+    <h1 class="year">2021</h1>
     <script>
 
         var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
